@@ -17,14 +17,12 @@ struct song_entry {
     uint32_t song_length;
     struct beep *frequencies;
 } songs[] = {
-        /*
     {
         .frequencies = mario,
         .song_name = "mario",
         .porter = "pepsipu",
         .song_length = sizeof(mario) / sizeof(struct beep)
-    },
-         */
+    },    
     {
         .frequencies = russia,
         .song_name = "russian anthem",
@@ -36,14 +34,14 @@ struct song_entry {
         .song_name = "axel f",
         .porter = "ararouge",
         .song_length = sizeof(axel) / sizeof(struct beep)
-    },
+    },*/
     {
         .frequencies = tetris,
         .song_name = "tetris",
-        .porter = "ararouge",
+        .porter = "rsttls",
         .song_length = sizeof(tetris) / sizeof(struct beep)
     },
-    {
+    /*{
         .frequencies = merry_christmas,
         .song_name = "christmas",
         .porter = "ararouge",
@@ -60,6 +58,7 @@ void play_song_by_index(int index) {
     for (uint32_t i = 0; i < songs[index].song_length; i++) {
         struct beep current_beep = songs[index].frequencies[i];
         beep(current_beep.freq, current_beep.len, current_beep.delay);
+        wait(current_beep.delay);
     }
 }
 void play_song(char *name) {
