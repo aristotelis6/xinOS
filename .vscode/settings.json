@@ -4,6 +4,12 @@
         "*.tcc": "c",
         "complex": "c",
         "numeric": "c",
-        "limits": "c"
+        "limits": "c",
+        "cstdlib": "c",
+        "chrono": "c",
+        "cmath": "c",
+        "ratio": "c",
+        "cinttypes": "c",
+        "valarray": "c"
     }
 }

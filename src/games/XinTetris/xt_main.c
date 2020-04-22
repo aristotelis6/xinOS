@@ -21,6 +21,7 @@ int xt_main()
     draw_square_coords(100,100,200,200,rgb565(XT_ORANGE_COLOR_888));
     key_down_handler=xt_key_down;
     play_song("tetris");
+    play_song("tetris");
 }
 
 //function extensions
